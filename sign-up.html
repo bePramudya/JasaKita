@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - JasaKita</title>
+  <link rel="stylesheet" href="/css/regisnw.css">
+  <link rel="icon" href="/src/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="login-box">
+      <div class="logo-section">
+        <div class="logo-circle">
+          <img src="/src/logo.jpg" alt="Logo" class="logo">
+        </div>
+        <h1>JasaKita</h1>
+        <p class="subtitle">Daftar untuk mulai menggunakan JasaKita</p>
+      </div>
+
+      <form id="registerForm">
+        <div class="input-group">
+          <i class="fas fa-envelope input-icon"></i>
+          <input type="email" id="email" placeholder="Email" required>
+          <div id="emailSignUpError" class="error-message"></div>
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-user-tag input-icon"></i>
+          <select id="role" required>
+            <option value="user">Klien</option>
+            <option value="admin">Admin Jasa</option>
+          </select>
+          <div id="roleSignUpError" class="error-message"></div>
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-lock input-icon"></i>
+          <input type="password" id="password" placeholder="Password" required>
+          <div id="passwordRules" class="info-message"></div>
+          <div id="passwordSignUpError" class="error-message"></div>
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-lock input-icon"></i>
+          <input type="password" id="confirm_password" placeholder="Ulangi Password" required>
+          <div id="confirmPasswordError" class="error-message"></div>
+        </div>
+
+        <button type="submit" class="register-btn">
+          <span>Daftar</span>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+
+        <div class="divider">
+          <span>atau</span>
+        </div>
+
+        <p class="login-text">
+          Sudah punya akun?
+          <a href="index.html">Login di sini</a>
+        </p>
+      </form>
+
+      <div id="notification-popup" class="popup hidden">
+        <div class="popup-content">
+          <i class="popup-icon"></i>
+          <p id="notification-message"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/js/sign-up.js" type="module"></script>
+</body>
+</html>
